@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebalancing App</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Rebalancing App</h1>
+
+  <!-- Hauptportfolio Rebalancing -->
+  <div class="card">
+    <label>Cash (€)</label>
+    <input id="cashInput" type="number" value="0">
+    <label>ACWI (€)</label>
+    <input id="acwiInput" type="number" value="0">
+    <label>Krypto (€)</label>
+    <input id="cryptoInput" type="number" value="0">
+    <button onclick="saveValues()">Rebalancing berechnen</button>
+  </div>
+
+  <div class="card">
+    <div id="output"></div>
+  </div>
+
+  <div class="card">
+    <canvas id="pieChart" width="300" height="300"></canvas>
+  </div>
+
+  <!-- Krypto Rebalancing -->
+  <div class="card">
+    <h3>Krypto Rebalancing</h3>
+    <a href="https://coinmarketcap.com/" target="_blank">CoinMarketCap besuchen</a>
+
+    <label>Bitcoin Anteil (%)</label>
+    <input id="btcPercent" type="number" value="60"/>
+    <label>Ethereum Anteil (%)</label>
+    <input id="ethPercent" type="number" value="40"/>
+    <button onclick="rebalanceCrypto()">Krypto berechnen</button>
+
+    <div id="cryptoOutput"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

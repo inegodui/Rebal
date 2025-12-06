@@ -1,0 +1,9 @@
+{
+  "name": "Rebalancing App",
+  "short_name": "Rebalancing",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f4f4f7",
+  "theme_color": "#007aff",
+  "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+}
